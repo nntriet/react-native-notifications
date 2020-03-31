@@ -5,6 +5,7 @@ import { NotificationCategory } from '../interfaces/NotificationCategory';
 import { NotificationPermissions } from '../interfaces/NotificationPermissions';
 import { UniqueIdProvider } from '../adapters/UniqueIdProvider';
 import { NotificationFactory } from '../DTO/NotificationFactory';
+import { NotificationChannel } from '../interfaces/NotificationChannel';
 
 export class Commands {
   constructor(
@@ -85,5 +86,9 @@ export class Commands {
 
   public refreshToken() {
     this.nativeCommandsSender.refreshToken();
+  }
+
+  public setNotificationChannel(notificationChannel: NotificationChannel) {
+    this.nativeCommandsSender.setNotificationChannel(notificationChannel);
   }
 }
