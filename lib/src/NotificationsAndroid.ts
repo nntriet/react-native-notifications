@@ -1,6 +1,7 @@
 import { Commands } from './commands/Commands';
 import { Platform } from 'react-native';
 import { NotificationChannel } from './interfaces/NotificationChannel';
+import 'proxy-polyfill';
 
 export class NotificationsAndroid {
   constructor(private readonly commands: Commands) {
